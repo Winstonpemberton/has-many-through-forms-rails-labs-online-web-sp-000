@@ -1,5 +1,5 @@
 <ul>
-<% @post.users.uniq.each do |user| %>
-  <li><%= link_to user.username, user_path(user) %></li>
+<% @user.posts.each do |post| %>
+  <li><%= link_to post.title, post_path(post) %></li>
 <% end %>
 </ul>
