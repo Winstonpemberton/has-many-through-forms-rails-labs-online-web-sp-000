@@ -21,7 +21,7 @@
 <h3>Add a New Comment</h3>
 <%= form_for(@comment = Comment.new) do |f| %>
   <%= f.label :content %>
-  <%= f.text_field :content %><br /><br />
+  <%= f.text_field :content %>
   <%= f.label "Username" %>
   <%= f.collection_select :user_id, User.all, :id, :username, :include_blank => true %>
   <%= f.label "New User:" %>
