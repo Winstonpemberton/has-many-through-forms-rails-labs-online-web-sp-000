@@ -26,7 +26,7 @@
   <%= f.collection_select :user_id, User.all, :id, :username, :include_blank => true %>
   <%= f.label "New User:" %>
   <%= f.fields_for :user, @comment.build_user do |user| %>
-    <%= user.text_field :comment_user_attributes_username %>
+    <%= user.text_field :username %>
   <% end %>
   <input type="hidden" name="comment[post_id]" value="<%= @post.id %>">
   <%= f.submit %>
